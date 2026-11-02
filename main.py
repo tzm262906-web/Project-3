@@ -1,12 +1,9 @@
-print("مرحباً بك في نظامنا!")
+print("أهلاً بك في نظامنا!")
 
+user_name = input("enter your name: ")
 
-name_input = input("Please enter your name: ").strip()
+if user_name.strip() == "":
+    user_name = "Guest"
+    print("no name entered. defaulting to guest.")
 
-
-if not name_input:
-    name_input = "Anonymous"
-    print("Warning: No name provided. Setting default to Anonymous.")
-
-
-print(f"Welcome aboard, {name_input}!")
+print(f"hello, {user_name}!")
